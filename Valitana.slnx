@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Valitana.Api/Valitana.Api.csproj" />
+    <Project Path="src/Valitana.Application/Valitana.Application.csproj" />
+    <Project Path="src/Valitana.Contracts/Valitana.Contracts.csproj" />
+    <Project Path="src/Valitana.Domain/Valitana.Domain.csproj" />
+    <Project Path="src/Valitana.Infrastructure/Valitana.Infrastructure.csproj" />
+    <Project Path="src/Valitana.Publisher/Valitana.Publisher.csproj" />
+    <Project Path="src/Valitana.SignalR/Valitana.SignalR.csproj" />
+  </Folder>
+</Solution>
