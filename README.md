@@ -4,6 +4,8 @@ Playground that streams fake stock prices to a live chart.
 
 The publisher posts prices to the API. The API raises a domain event, then publishes to RabbitMQ. The SignalR service consumes that message and pushes it to a Vue chart.
 
+AI was used to help build this app.
+
 ## Project references
 
 Which .NET projects reference which. Arrows point to the project being referenced. Publisher has no project references.
