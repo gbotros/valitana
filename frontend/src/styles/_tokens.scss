@@ -1,0 +1,24 @@
+$bg: #12141a;
+$panel: #1b1f29;
+$line: #2a3140;
+$text: #e8ecf4;
+$muted: #8b95a8;
+$accent: #6ee7b7;
+$down: #f87171;
+$warn: #fbbf24;
+
+$font: "Segoe UI", "IBM Plex Sans", sans-serif;
+$mono: "Cascadia Mono", "Consolas", monospace;
+
+$app-max: 920px;
+$chart-height: 280px;
+$radius-card: 12px;
+
+@mixin label {
+  display: block;
+  margin: 0 0 8px;
+  color: $muted;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}

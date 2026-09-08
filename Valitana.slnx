@@ -1,11 +1,21 @@
 <Solution>
-  <Folder Name="/src/">
-    <Project Path="src/Valitana.Api/Valitana.Api.csproj" />
-    <Project Path="src/Valitana.Application/Valitana.Application.csproj" />
-    <Project Path="src/Valitana.Contracts/Valitana.Contracts.csproj" />
-    <Project Path="src/Valitana.Domain/Valitana.Domain.csproj" />
-    <Project Path="src/Valitana.Infrastructure/Valitana.Infrastructure.csproj" />
-    <Project Path="src/Valitana.Publisher/Valitana.Publisher.csproj" />
-    <Project Path="src/Valitana.SignalR/Valitana.SignalR.csproj" />
+  <Folder Name="/backend/">
+    <Project Path="backend/src/Valitana.Domain/Valitana.Domain.csproj" />
+    <Project Path="backend/src/Valitana.Application/Valitana.Application.csproj" />
+    <Project Path="backend/src/Valitana.Contracts/Valitana.Contracts.csproj" />
+    <Project Path="backend/src/Valitana.Infrastructure/Valitana.Infrastructure.csproj" />
+    <Project Path="backend/src/Valitana.Api/Valitana.Api.csproj" />
+    <Project Path="backend/src/Valitana.SignalR/Valitana.SignalR.csproj" />
+    <Project Path="backend/src/Valitana.Publisher/Valitana.Publisher.csproj" />
+    <Project Path="backend/tests/Valitana.ArchitectureTests/Valitana.ArchitectureTests.csproj" />
+    <Project Path="backend/tests/Valitana.UnitTests/Valitana.UnitTests.csproj" />
+    <Project Path="backend/tests/Valitana.IntegrationTests/Valitana.IntegrationTests.csproj" />
+  </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="Directory.Build.props" />
+    <File Path="docker-compose.yml" />
+    <File Path=".editorconfig" />
+    <File Path=".gitignore" />
+    <File Path="README.md" />
   </Folder>
 </Solution>

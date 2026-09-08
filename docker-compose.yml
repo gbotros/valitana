@@ -1,0 +1,57 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3-management-alpine
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    healthcheck:
+      test: rabbitmq-diagnostics -q ping
+      interval: 10s
+      timeout: 10s
+      retries: 10
+
+  api:
+    build:
+      context: ./backend
+      dockerfile: src/Valitana.Api/Dockerfile
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      RabbitMq__HostName: rabbitmq
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  signalr:
+    build:
+      context: ./backend
+      dockerfile: src/Valitana.SignalR/Dockerfile
+    ports:
+      - "5001:8080"
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      RabbitMq__HostName: rabbitmq
+    depends_on:
+      rabbitmq:
+        condition: service_healthy
+
+  publisher:
+    build:
+      context: ./backend
+      dockerfile: src/Valitana.Publisher/Dockerfile
+    environment:
+      ApiBaseUrl: http://api:8080
+      Symbol: AAPL
+    depends_on:
+      - api
+      - signalr
+
+  web:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - signalr

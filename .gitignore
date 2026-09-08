@@ -1,43 +1,22 @@
-# Build
+# .NET build output
 [Bb]in/
 [Oo]bj/
-[Dd]ebug/
-[Rr]elease/
-x64/
-x86/
+[Ll]og/
+[Ll]ogs/
 [Aa]rtifacts/
-*.dll
-*.exe
-*.pdb
-*.appx
-*.appxbundle
-*.appxupload
+.vs/
+.dotnet/
 
-# .NET / Visual Studio
+# Visual Studio / Rider user files
 *.user
-*.userosscache
 *.suo
+*.userosscache
 *.sln.docstates
 *.rsuser
-*.ncb
-*.sdf
-*.opensdf
-*.VC.db
-*.VC.VC.opendb
-.vs/
-*.pidb
-*.svclog
-
-# Rider / JetBrains
-.idea/
+*.userprefs
+*.DotSettings.user
 *.sln.iml
-
-# VS Code (keep shared settings if added later)
-.vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
-!.vscode/extensions.json
+.idea/
 
 # NuGet
 *.nupkg
@@ -46,23 +25,21 @@ x86/
 !**/[Pp]ackages/build/
 project.lock.json
 project.fragment.lock.json
-artifacts/
 
-# Test / coverage
+# Tests / coverage
 [Tt]est[Rr]esult*/
-[Bb]uild[Ll]og.*
+TestResults/
+*.trx
 *.coverage
 *.coveragexml
 coverage/
-TestResults/
-*.trx
 
 # Node / Vue / Vite
 node_modules/
 dist/
 dist-ssr/
 .vite/
-*.local
+.output/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -78,8 +55,12 @@ secrets.json
 *.pfx
 *.key
 
-# Docker
-*.log
+# VS Code (keep shared workspace files)
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
 
 # OS
 Thumbs.db
@@ -87,8 +68,6 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 .DS_Store
-.Spotlight-V100
-.Trashes
 
 # Misc
 *.tmp
