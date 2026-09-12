@@ -4,7 +4,6 @@ import {
   CategoryScale,
   Chart,
   Filler,
-  Legend,
   LinearScale,
   LineController,
   LineElement,
@@ -21,7 +20,6 @@ Chart.register(
   CategoryScale,
   Filler,
   Tooltip,
-  Legend,
 );
 
 const CHART_LIMIT = 60;

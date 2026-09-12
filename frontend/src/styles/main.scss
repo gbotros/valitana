@@ -2,14 +2,9 @@
 
 :root {
   color-scheme: dark;
-  --bg: #{$bg};
-  --panel: #{$panel};
   --line: #{$line};
-  --text: #{$text};
   --muted: #{$muted};
   --accent: #{$accent};
-  --down: #{$down};
-  --warn: #{$warn};
 }
 
 * {
